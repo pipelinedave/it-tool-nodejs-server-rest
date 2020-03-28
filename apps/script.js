@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Promise = require("bluebird");
-const fs = Promise.promisifyAll(require("fs"));
+const fs = require("fs");
 const scriptutil = require("../util/scriptutil");
 const path = require("path");
 const scriptdir = path.resolve(__dirname, "../script/");
@@ -14,11 +13,15 @@ scriptmap();
 
 // */script
 router.get(["/", "/:script"], async (req, res) => {
-  let shell = scriptutil.initShell();
+  try {
+    let shell = scriptutil.initShell();
 
-  scriptutil.prepShell(req, shell, req.params.script);
+    scriptutil.prepShell(req, shell, req.params.script);
 
-  scriptutil.invokeShell(shell, res);
+    scriptutil.invokeShell(shell, res);
+  } catch (error) {
+    res.end();
+  }
 });
 
 module.exports = router;
