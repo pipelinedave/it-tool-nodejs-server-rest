@@ -1,8 +1,6 @@
 const express = require("express");
-
 const app = express();
 const router = express.Router();
-
 const port = 1337;
 
 app.use(express.json());

@@ -1,37 +1,26 @@
 const express = require("express");
 const router = express.Router();
 
-const Powershell = require("node-powershell");
+const Promise = require("bluebird");
+const fs = Promise.promisifyAll(require("fs"));
+
+const scriptutil = require("../util/scriptutil");
+const path = require("path");
+const scriptdir = path.resolve(__dirname, "../script/");
+
+// *building scriptmap
+async function scriptmap() {
+  const scriptmap = await scriptutil.getScriptMap(scriptdir, fs);
+}
+scriptmap();
 
 // */script
-router.get(["/", "/:command"], (req, res) => {
-  async function executeCommand() {
-    let shell = new Powershell({
-      pwsh: true,
-      executionPolicy: "Bypass",
-      verbose: true
-    });
+router.get(["/", "/:script"], async (req, res) => {
+  let shell = scriptutil.initShell();
 
-    console.log(req.params.command);
+  scriptutil.prepShell(req, shell);
 
-    if (req.params.command === undefined)
-      shell.addCommand("Write-Output @($PSVersionTable)");
-    else shell.addCommand(req.params.command);
-
-    await shell
-      .invoke()
-      .then(output => {
-        console.log(output);
-        res.json(output);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-
-    await shell.dispose();
-    res.end();
-  }
-  return executeCommand();
+  scriptutil.invokeShell(shell, res);
 });
 
 module.exports = router;
