@@ -10,7 +10,7 @@ router.use((req, res, next) => {
   next();
 });
 
-// */api/data
+// */data
 router.get('/', (req, res) => {
   async function getData() {
     const data = await fs.readdirAsync('./data');
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
   getData();
 });
 
-// */api/data/file
+// */data/file
 router.get('/:file', (req, res) => {
   async function getFile() {
     const data = await fs.readFileAsync(`./data/${req.params.file}.json`);
