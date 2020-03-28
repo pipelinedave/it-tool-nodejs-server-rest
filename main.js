@@ -2,9 +2,16 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 const port = 1337;
+const path = require("path");
+const scriptdir = path.resolve(__dirname, "./script/");
+const fs = require("fs");
+const scriptutil = require("./util/scriptutil");
 
 app.use(express.json());
 app.use("/", router);
+
+// *building scriptmap
+scriptutil.getScriptMap(scriptdir, fs);
 
 // */
 app.get("/", (req, res) => {

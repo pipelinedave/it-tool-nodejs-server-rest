@@ -18,8 +18,7 @@ function toast(param1, param2) {
 
 // */lab
 router.get("/", async (req, res) => {
-  let result = await toast("lmao", "lel");
-  console.log(result);
+  console.log(scriptmap.get("test1.ps1"));
   res.end();
 });
 
