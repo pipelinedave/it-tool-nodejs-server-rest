@@ -1,12 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Promise = require('bluebird');
-const fs = Promise.promisifyAll(require('fs'));
-
 const Powershell = require('node-powershell');
-// ?Test having the shell be launched on demand rather than autoinit
-
 
 // */shell
 router.get(['/', '/:command'], (req, res) => {
@@ -34,6 +29,5 @@ router.get(['/', '/:command'], (req, res) => {
   };
   return executeCommand();
 });
-
 
 module.exports = router;

@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const Promise = require('bluebird');
-const fs = Promise.promisifyAll(require('fs'));
-
 // */lab
 router.get('/', (req, res) => {
   console.log(req.protocol)
@@ -13,6 +10,5 @@ router.get('/', (req, res) => {
   console.log(req.subomains)
   return res.status(200).json('lab completed.');
 });
-
 
 module.exports = router;

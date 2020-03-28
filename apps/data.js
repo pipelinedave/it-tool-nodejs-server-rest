@@ -4,7 +4,6 @@ const router = express.Router();
 const Promise = require('bluebird');
 const fs = Promise.promisifyAll(require('fs'));
 
-
 // */data
 router.get('/', (req, res) => {
   async function getData() {

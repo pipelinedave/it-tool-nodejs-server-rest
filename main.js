@@ -29,6 +29,5 @@ router.use('/api', api);
 const lab = require('./apps/lab');
 router.use('/lab', lab);
 
-
 module.exports = app.listen(port, () => console.log(`ready.`));
 
