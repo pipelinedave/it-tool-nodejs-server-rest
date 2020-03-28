@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node main.js",
     "dev": "nodemon main.js",
-    "test": "mocha 'tests/apitest.js'"
+    "test-api": "mocha 'tests/test-api.js'",
+    "test-script": "mocha 'tests/test-script.js'",
+    "test-lab": "mocha 'tests/test-lab.js"
   },
   "keywords": [],
   "author": "",
