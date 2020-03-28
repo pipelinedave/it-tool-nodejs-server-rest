@@ -1,0 +1,624 @@
+{
+  "CimClass": {
+    "CimSuperClassName": "CIM_OperatingSystem",
+    "CimSuperClass": {
+      "CimSuperClassName": "CIM_LogicalElement",
+      "CimSuperClass": "ROOT/cimv2:CIM_LogicalElement",
+      "CimClassProperties": "Caption Description InstallDate Name Status CreationClassName CSCreationClassName CSName CurrentTimeZone Distributed FreePhysicalMemory FreeSpaceInPagingFiles FreeVirtualMemory LastBootUpTime LocalDateTime MaxNumberOfProcesses MaxProcessMemorySize NumberOfLicensedUsers NumberOfProcesses NumberOfUsers OSType OtherTypeDescription SizeStoredInPagingFiles TotalSwapSpaceSize TotalVirtualMemorySize TotalVisibleMemorySize Version",
+      "CimClassQualifiers": "Locale = 1033 UUID = \"{8502C565-5FBB-11D2-AAC1-006008C78BC7}\" Abstract = True",
+      "CimClassMethods": "Reboot Shutdown",
+      "CimSystemProperties": "Microsoft.Management.Infrastructure.CimSystemProperties"
+    },
+    "CimClassProperties": [
+      "Caption",
+      "Description",
+      "InstallDate",
+      "Name",
+      "Status",
+      "CreationClassName",
+      "CSCreationClassName",
+      "CSName",
+      "CurrentTimeZone",
+      "Distributed",
+      "FreePhysicalMemory",
+      "FreeSpaceInPagingFiles",
+      "FreeVirtualMemory",
+      "LastBootUpTime",
+      "LocalDateTime",
+      "MaxNumberOfProcesses",
+      "MaxProcessMemorySize",
+      "NumberOfLicensedUsers",
+      "NumberOfProcesses",
+      "NumberOfUsers",
+      "OSType",
+      "OtherTypeDescription",
+      "SizeStoredInPagingFiles",
+      "TotalSwapSpaceSize",
+      "TotalVirtualMemorySize",
+      "TotalVisibleMemorySize",
+      "Version",
+      "BootDevice",
+      "BuildNumber",
+      "BuildType",
+      "CodeSet",
+      "CountryCode",
+      "CSDVersion",
+      "DataExecutionPrevention_32BitApplications",
+      "DataExecutionPrevention_Available",
+      "DataExecutionPrevention_Drivers",
+      "DataExecutionPrevention_SupportPolicy",
+      "Debug",
+      "EncryptionLevel",
+      "ForegroundApplicationBoost",
+      "LargeSystemCache",
+      "Locale",
+      "Manufacturer",
+      "MUILanguages",
+      "OperatingSystemSKU",
+      "Organization",
+      "OSArchitecture",
+      "OSLanguage",
+      "OSProductSuite",
+      "PAEEnabled",
+      "PlusProductID",
+      "PlusVersionNumber",
+      "PortableOperatingSystem",
+      "Primary",
+      "ProductType",
+      "RegisteredUser",
+      "SerialNumber",
+      "ServicePackMajorVersion",
+      "ServicePackMinorVersion",
+      "SuiteMask",
+      "SystemDevice",
+      "SystemDirectory",
+      "SystemDrive",
+      "WindowsDirectory"
+    ],
+    "CimClassQualifiers": [
+      "Locale = 1033",
+      "UUID = \"{8502C4DE-5FBB-11D2-AAC1-006008C78BC7}\"",
+      "dynamic = True",
+      "provider = \"CIMWin32\"",
+      "Singleton = True",
+      "SupportsUpdate = True"
+    ],
+    "CimClassMethods": [
+      "Reboot",
+      "Shutdown",
+      "Win32Shutdown",
+      "Win32ShutdownTracker",
+      "SetDateTime"
+    ],
+    "CimSystemProperties": {
+      "Namespace": "root/cimv2",
+      "ServerName": "ABP-US-OPL-SB03",
+      "ClassName": "Win32_OperatingSystem",
+      "Path": null
+    }
+  },
+  "CimInstanceProperties": [
+    {
+      "Name": "Caption",
+      "Value": "Microsoft Windows 10 Enterprise",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Description",
+      "Value": "",
+      "CimType": 14,
+      "Flags": "Property, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "InstallDate",
+      "Value": "2020-03-01T13:36:24+01:00",
+      "CimType": 13,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Name",
+      "Value": "Microsoft Windows 10 Enterprise|C:\\WINDOWS|\\Device\\Harddisk0\\Partition4",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Status",
+      "Value": "OK",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "CreationClassName",
+      "Value": "Win32_OperatingSystem",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "CSCreationClassName",
+      "Value": "Win32_ComputerSystem",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "CSName",
+      "Value": "ABP-US-OPL-SB03",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "CurrentTimeZone",
+      "Value": 60,
+      "CimType": 5,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Distributed",
+      "Value": false,
+      "CimType": 1,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "FreePhysicalMemory",
+      "Value": 3340768,
+      "CimType": 8,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "FreeSpaceInPagingFiles",
+      "Value": 1261516,
+      "CimType": 8,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "FreeVirtualMemory",
+      "Value": 4031456,
+      "CimType": 8,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "LastBootUpTime",
+      "Value": "2020-03-24T10:19:56.5+01:00",
+      "CimType": 13,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "LocalDateTime",
+      "Value": "2020-03-28T07:26:31.595+01:00",
+      "CimType": 13,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "MaxNumberOfProcesses",
+      "Value": 4294967295,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "MaxProcessMemorySize",
+      "Value": 137438953344,
+      "CimType": 8,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "NumberOfLicensedUsers",
+      "Value": null,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified, NullValue",
+      "IsValueModified": false
+    },
+    {
+      "Name": "NumberOfProcesses",
+      "Value": 207,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "NumberOfUsers",
+      "Value": 26,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "OSType",
+      "Value": 18,
+      "CimType": 4,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "OtherTypeDescription",
+      "Value": null,
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified, NullValue",
+      "IsValueModified": false
+    },
+    {
+      "Name": "SizeStoredInPagingFiles",
+      "Value": 1310720,
+      "CimType": 8,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "TotalSwapSpaceSize",
+      "Value": null,
+      "CimType": 8,
+      "Flags": "Property, ReadOnly, NotModified, NullValue",
+      "IsValueModified": false
+    },
+    {
+      "Name": "TotalVirtualMemorySize",
+      "Value": 9623660,
+      "CimType": 8,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "TotalVisibleMemorySize",
+      "Value": 8312940,
+      "CimType": 8,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Version",
+      "Value": "10.0.18363",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "BootDevice",
+      "Value": "\\Device\\HarddiskVolume2",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "BuildNumber",
+      "Value": "18363",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "BuildType",
+      "Value": "Multiprocessor Free",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "CodeSet",
+      "Value": "1252",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "CountryCode",
+      "Value": "1",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "CSDVersion",
+      "Value": null,
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified, NullValue",
+      "IsValueModified": false
+    },
+    {
+      "Name": "DataExecutionPrevention_32BitApplications",
+      "Value": true,
+      "CimType": 1,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "DataExecutionPrevention_Available",
+      "Value": true,
+      "CimType": 1,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "DataExecutionPrevention_Drivers",
+      "Value": true,
+      "CimType": 1,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "DataExecutionPrevention_SupportPolicy",
+      "Value": 2,
+      "CimType": 2,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Debug",
+      "Value": false,
+      "CimType": 1,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "EncryptionLevel",
+      "Value": 256,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "ForegroundApplicationBoost",
+      "Value": 2,
+      "CimType": 2,
+      "Flags": "Property, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "LargeSystemCache",
+      "Value": null,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified, NullValue",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Locale",
+      "Value": "0409",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Manufacturer",
+      "Value": "Microsoft Corporation",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "MUILanguages",
+      "Value": "de-DE en-US",
+      "CimType": 30,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "OperatingSystemSKU",
+      "Value": 4,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Organization",
+      "Value": "",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "OSArchitecture",
+      "Value": "64-bit",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "OSLanguage",
+      "Value": 1031,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "OSProductSuite",
+      "Value": 256,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "PAEEnabled",
+      "Value": null,
+      "CimType": 1,
+      "Flags": "Property, ReadOnly, NotModified, NullValue",
+      "IsValueModified": false
+    },
+    {
+      "Name": "PlusProductID",
+      "Value": null,
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified, NullValue",
+      "IsValueModified": false
+    },
+    {
+      "Name": "PlusVersionNumber",
+      "Value": null,
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified, NullValue",
+      "IsValueModified": false
+    },
+    {
+      "Name": "PortableOperatingSystem",
+      "Value": false,
+      "CimType": 1,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "Primary",
+      "Value": true,
+      "CimType": 1,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "ProductType",
+      "Value": 1,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "RegisteredUser",
+      "Value": "Windows-Benutzer",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "SerialNumber",
+      "Value": "00329-00000-00003-AA225",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "ServicePackMajorVersion",
+      "Value": 0,
+      "CimType": 4,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "ServicePackMinorVersion",
+      "Value": 0,
+      "CimType": 4,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "SuiteMask",
+      "Value": 272,
+      "CimType": 6,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "SystemDevice",
+      "Value": "\\Device\\HarddiskVolume4",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "SystemDirectory",
+      "Value": "C:\\WINDOWS\\system32",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "SystemDrive",
+      "Value": "C:",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    },
+    {
+      "Name": "WindowsDirectory",
+      "Value": "C:\\WINDOWS",
+      "CimType": 14,
+      "Flags": "Property, ReadOnly, NotModified",
+      "IsValueModified": false
+    }
+  ],
+  "CimSystemProperties": {
+    "Namespace": "root/cimv2",
+    "ServerName": "ABP-US-OPL-SB03",
+    "ClassName": "Win32_OperatingSystem",
+    "Path": null
+  },
+  "Caption": "Microsoft Windows 10 Enterprise",
+  "Description": "",
+  "InstallDate": "2020-03-01T13:36:24+01:00",
+  "Name": "Microsoft Windows 10 Enterprise|C:\\WINDOWS|\\Device\\Harddisk0\\Partition4",
+  "Status": "OK",
+  "CreationClassName": "Win32_OperatingSystem",
+  "CSCreationClassName": "Win32_ComputerSystem",
+  "CSName": "ABP-US-OPL-SB03",
+  "CurrentTimeZone": 60,
+  "Distributed": false,
+  "FreePhysicalMemory": 3340768,
+  "FreeSpaceInPagingFiles": 1261516,
+  "FreeVirtualMemory": 4031456,
+  "LastBootUpTime": "2020-03-24T10:19:56.5+01:00",
+  "LocalDateTime": "2020-03-28T07:26:31.595+01:00",
+  "MaxNumberOfProcesses": 4294967295,
+  "MaxProcessMemorySize": 137438953344,
+  "NumberOfLicensedUsers": null,
+  "NumberOfProcesses": 207,
+  "NumberOfUsers": 26,
+  "OSType": 18,
+  "OtherTypeDescription": null,
+  "SizeStoredInPagingFiles": 1310720,
+  "TotalSwapSpaceSize": null,
+  "TotalVirtualMemorySize": 9623660,
+  "TotalVisibleMemorySize": 8312940,
+  "Version": "10.0.18363",
+  "BootDevice": "\\Device\\HarddiskVolume2",
+  "BuildNumber": "18363",
+  "BuildType": "Multiprocessor Free",
+  "CodeSet": "1252",
+  "CountryCode": "1",
+  "CSDVersion": null,
+  "DataExecutionPrevention_32BitApplications": true,
+  "DataExecutionPrevention_Available": true,
+  "DataExecutionPrevention_Drivers": true,
+  "DataExecutionPrevention_SupportPolicy": 2,
+  "Debug": false,
+  "EncryptionLevel": 256,
+  "ForegroundApplicationBoost": 2,
+  "LargeSystemCache": null,
+  "Locale": "0409",
+  "Manufacturer": "Microsoft Corporation",
+  "MUILanguages": [
+    "de-DE",
+    "en-US"
+  ],
+  "OperatingSystemSKU": 4,
+  "Organization": "",
+  "OSArchitecture": "64-bit",
+  "OSLanguage": 1031,
+  "OSProductSuite": 256,
+  "PAEEnabled": null,
+  "PlusProductID": null,
+  "PlusVersionNumber": null,
+  "PortableOperatingSystem": false,
+  "Primary": true,
+  "ProductType": 1,
+  "RegisteredUser": "Windows-Benutzer",
+  "SerialNumber": "00329-00000-00003-AA225",
+  "ServicePackMajorVersion": 0,
+  "ServicePackMinorVersion": 0,
+  "SuiteMask": 272,
+  "SystemDevice": "\\Device\\HarddiskVolume4",
+  "SystemDirectory": "C:\\WINDOWS\\system32",
+  "SystemDrive": "C:",
+  "WindowsDirectory": "C:\\WINDOWS",
+  "PSComputerName": null
+}
