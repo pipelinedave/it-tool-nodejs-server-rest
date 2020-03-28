@@ -13,8 +13,7 @@ module.exports = {
     });
   },
 
-  prepShell: function(req, shell) {
-    let param = req.params.script;
+  prepShell: function(req, shell, param) {
     if (param === undefined) shell.addCommand(fallbackcommand);
     else {
       if (!param.includes(".ps1")) param = param + ".ps1";
