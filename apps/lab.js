@@ -4,15 +4,15 @@ const router = express.Router();
 const Promise = require('bluebird');
 const fs = Promise.promisifyAll(require('fs'));
 
-// */api
+// */lab
 router.get('/', (req, res) => {
-  return res.status(200).json([
-    {
-      api: 'it-tool-rest',
-      uptime: process.uptime(),
-      reqheader: req.header,
-    },
-  ]);
+  console.log(req.protocol)
+  console.log(req.hostname)
+  console.log(req.path)
+  console.log(req.originalUrl)
+  console.log(req.subomains)
+  return res.status(200).json('lab completed.');
 });
+
 
 module.exports = router;

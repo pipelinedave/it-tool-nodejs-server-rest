@@ -25,5 +25,10 @@ router.use('/shell', shell);
 const api = require('./apps/api');
 router.use('/api', api);
 
+// */lab
+const lab = require('./apps/lab');
+router.use('/lab', lab);
 
-app.listen(port, () => console.log(`resting`));
+
+module.exports = app.listen(port, () => console.log(`ready.`));
+

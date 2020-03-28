@@ -5,11 +5,6 @@ const Promise = require('bluebird');
 const fs = Promise.promisifyAll(require('fs'));
 
 
-router.use((req, res, next) => {
-  console.log('I am the data router');
-  next();
-});
-
 // */data
 router.get('/', (req, res) => {
   async function getData() {
@@ -17,7 +12,7 @@ router.get('/', (req, res) => {
     console.log(data);
     res.send(data);
   }
-  getData();
+  return getData();
 });
 
 // */data/file
@@ -26,7 +21,7 @@ router.get('/:file', (req, res) => {
     const data = await fs.readFileAsync(`./data/${req.params.file}.json`);
     res.send(JSON.parse(data));
   }
-  getFile();
+  return getFile();
 });
 
 module.exports = router;

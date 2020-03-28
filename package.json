@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node main.js",
     "dev": "nodemon main.js",
-    "data": "nodemon data.js"
+    "test": "mocha 'tests/apitest.js'"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +14,12 @@
   "dependencies": {
     "bluebird": "^3.7.2",
     "express": "^4.17.1",
+    "mocha": "^7.1.1",
     "node-powershell": "^4.0.0",
     "nodemon": "^2.0.2",
     "promisify": "0.0.3"
   },
   "devDependencies": {
-    "eslint-config-google": "^0.14.0"
+    "supertest": "^4.0.2"
   }
 }

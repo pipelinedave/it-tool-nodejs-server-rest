@@ -17,13 +17,14 @@ router.get(['/', '/:command'], (req, res) => {
       verbose: true,
     });
 
-    shell.addCommand(req.params.command).catch(err => {
-      shell.addCommand('$PSVersionTable');
-    });
+    console.log(req.params.command);
+
+    if(req.params.command === undefined) shell.addCommand('Write-Output @($PSVersionTable)');
+    else shell.addCommand(req.params.command);
 
     await shell.invoke().then(output => {
       console.log(output);
-      res.send(output);
+      res.json(output);
     }).catch(err => {
       console.log(err);
     });
@@ -31,7 +32,7 @@ router.get(['/', '/:command'], (req, res) => {
     await shell.dispose();
     res.end();
   };
-  executeCommand();
+  return executeCommand();
 });
 
 
