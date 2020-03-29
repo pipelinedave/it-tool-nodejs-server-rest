@@ -16,8 +16,12 @@ module.exports = {
   prepShell: function(req, shell, param) {
     if (param === undefined) shell.addCommand(fallbackcommand);
     else {
-      if (!param.includes(".ps1")) param = param + ".ps1";
-      param = `${scriptdir}\\${param}`;
+      if (req.baseUrl.includes("/script")) {
+        if (!param.includes(".ps1")) {
+          param = param + ".ps1";
+          param = `${scriptdir}\\${param}`;
+        }
+      }
       shell.addCommand(param);
     }
   },
