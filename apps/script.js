@@ -21,9 +21,9 @@ router.get("/run/:script", async (req, res) => {
 });
 
 // */script/get
-router.get("/get/:script", async (req, res) => {
+router.get("/get/:script", (req, res) => {
   console.log(`getting script ${req.params.script}`);
-  res.send(scriptmap.get(req.params.script));
+  res.json(scriptmap.get(req.params.script));
 });
 
 module.exports = router;

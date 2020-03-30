@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const router = express.Router();
 const port = 1337;
 const path = require("path");
@@ -9,6 +10,8 @@ const scriptutil = require("./util/scriptutil");
 
 app.use(express.json());
 app.use("/", router);
+app.use(cors());
+router.use(cors());
 
 // *building scriptmap
 scriptutil.getScriptMap(scriptdir, fs);
