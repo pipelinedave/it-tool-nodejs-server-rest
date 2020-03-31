@@ -13,7 +13,7 @@ param (
 
 
 $ScriptBlock = {
-    Get-Process -Name $Using:Name
+    Get-Process -Name $Using:Name | Select-Object Name, Id, StartTime
 }
 
 try {

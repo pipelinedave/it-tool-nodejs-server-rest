@@ -1,8 +1,4 @@
 const Powershell = require("node-powershell");
-const path = require("path");
-const scriptdir = path.resolve(__dirname, "../script/");
-const fallbackcommand =
-  "Write-Output -InputObject (ConvertTo-Json -InputObject @($PSVersionTable) -Compress)";
 
 module.exports = {
   initShell: function() {
@@ -13,17 +9,8 @@ module.exports = {
     });
   },
 
-  prepShell: function(req, shell, param) {
-    if (param === undefined) shell.addCommand(fallbackcommand);
-    else {
-      if (req.baseUrl.includes("/script")) {
-        if (!param.includes(".ps1")) {
-          param = param + ".ps1";
-          param = `${scriptdir}\\${param}`;
-        }
-      }
-      shell.addCommand(param);
-    }
+  prepShell: function(req, shell, script) {
+    shell.addCommand(script);
   },
 
   invokeShell: async function(shell, res) {
