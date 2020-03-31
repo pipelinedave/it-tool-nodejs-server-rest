@@ -18,6 +18,7 @@ scriptutil.getScriptMap(scriptdir, fs);
 
 // */
 app.get("/", (req, res) => {
+  scriptutil.getScriptMap(scriptdir, fs);
   res.status(200).send("OK");
 });
 

@@ -18,8 +18,11 @@ function toast(param1, param2) {
 
 // */lab
 router.get("/", async (req, res) => {
-  console.log(scriptmap.get("test1.ps1"));
-  res.end();
+  // res.send({a: [...a], b: [...b]});
+  scriptutil.getScriptMap(scriptdir, fs);
+  const output = { scripts: [...scriptmap] };
+  console.log({ scripts: [...scriptmap] });
+  res.json(output);
 });
 
 module.exports = router;
