@@ -23,23 +23,23 @@ app.get("/", (req, res) => {
 });
 
 // */script
-const script = require("./apps/script");
+const script = require("./services/script");
 router.use("/script", script);
 
 // */data
-const data = require("./apps/data");
+const data = require("./services/data");
 router.use("/data", data);
 
 // */shell
-const shell = require("./apps/shell");
+const shell = require("./services/shell");
 router.use("/shell", shell);
 
 // */api
-const api = require("./apps/api");
+const api = require("./services/api");
 router.use("/api", api);
 
 // */lab
-const lab = require("./apps/lab");
+const lab = require("./services/lab");
 router.use("/lab", lab);
 
 module.exports = app.listen(port, () => console.log(`ready.`));
