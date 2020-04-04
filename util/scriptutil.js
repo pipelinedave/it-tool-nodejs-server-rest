@@ -1,7 +1,7 @@
 const Powershell = require("node-powershell");
 
 module.exports = {
-  initShell: function() {
+  initShell: function () {
     return new Powershell({
       pwsh: true,
       executionPolicy: "Bypass",
@@ -9,11 +9,11 @@ module.exports = {
     });
   },
 
-  prepShell: function(req, shell, script) {
+  prepShell: function (req, shell, script) {
     shell.addCommand(script);
   },
 
-  invokeShell: async function(shell, res) {
+  invokeShell: async function (shell, res) {
     try {
       let result = await shell.invoke();
       res.send(result);
@@ -38,9 +38,8 @@ module.exports = {
     }
   },
 
-  getScriptMap: function(scriptdir, fs) {
-    // return new Promise((resolve, reject) => {
-    var scriptmap = new Map();
+  getScriptMap: function (scriptdir, fs) {
+    var scriptmap = [];
     fs.readdirSync(scriptdir).forEach(scriptfile => {
       const scriptlabel = scriptfile.replace(".ps1", "");
       const scriptname = scriptfile;
@@ -76,9 +75,7 @@ module.exports = {
         scriptcontentarray,
         scriptparameter
       );
-      scriptmap.set(scriptobject.label, scriptobject);
-      // });
-      // resolve(scriptmap);
+      scriptmap.push(scriptobject);
       global.scriptmap = scriptmap;
     });
   }
