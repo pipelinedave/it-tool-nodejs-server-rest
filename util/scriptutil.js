@@ -29,11 +29,12 @@ module.exports = {
   },
 
   pwshScript: class {
-    constructor(label, name, path, content, parameter) {
+    constructor(label, name, path, content, briefdescription, parameter) {
       this.label = label;
       this.name = name;
       this.path = path;
       this.content = content;
+      this.briefdescription = briefdescription;
       this.parameter = parameter;
     }
   },
@@ -48,11 +49,15 @@ module.exports = {
         .readFileSync(scriptpath, "utf8")
         .toString();
 
-      let scriptcontentarray = scriptcontentstring
+      const scriptcontentarray = scriptcontentstring
         .replace(/\r\n/g, "\n")
         .split("\n");
 
-      let scriptparameter = [];
+      const scriptbriefdescriptionindex = scriptcontentarray.indexOf(".BRIEFDESCRIPTION");
+      const scriptbriefdescription = (scriptbriefdescriptionindex != -1) ? scriptcontentarray[scriptbriefdescriptionindex + 1] : "No brief description available"
+
+
+      const scriptparameter = [];
       const start = scriptcontentarray.indexOf("param (");
       const end = scriptcontentarray.indexOf(")");
       for (var i = start + 1; i < end; i++) {
@@ -73,6 +78,7 @@ module.exports = {
         scriptname,
         scriptpath,
         scriptcontentarray,
+        scriptbriefdescription,
         scriptparameter
       );
       scriptmap.push(scriptobject);

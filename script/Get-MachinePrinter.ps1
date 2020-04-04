@@ -1,22 +1,27 @@
+<#
+.BRIEFDESCRIPTION
+Dieses Skript zeigt die verbundenen Drucker auf Maschinenebene an.
+#>
+
 [CmdletBinding()]
 param (
-    [Parameter()]
-    [String]
-    $ComputerName,
+  [Parameter()]
+  [String]
+  $ComputerName,
 
-    [Parameter()]
-    [String]
-    $PrinterName
+  [Parameter()]
+  [String]
+  $PrinterName
 )
 
 
 
 
 try {
-    $Output = Get-MachinePrinter -ComputerName $ComputerName
+  $Output = Get-MachinePrinter -ComputerName $ComputerName
 }
 catch {
-    $Output = $error[0]
+  $Output = $error[0]
 }
 
 
